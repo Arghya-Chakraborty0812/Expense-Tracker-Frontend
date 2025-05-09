@@ -1,12 +1,38 @@
-# React + Vite
+# 💸 Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Expense Tracker web application built with the **MERN stack (MongoDB, Express.js, React, Node.js)** that allows users to **add, view, and analyze** their expenses securely.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔐 **Authentication**: Token-based login system using JWT
+- 🧾 **Manage Expenses**: Add, view, and delete expenses
+- 📈 **Charts and Reports**: Visual representation of monthly expenses using charts
+- 🎯 **Responsive UI**: TailwindCSS-based design for mobile and desktop
+- 🔒 **Protected Routes**: Accessible only when logged in
 
-## Expanding the ESLint configuration
+## 🖼️ Demo
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Demo](public/vite.svg) <!-- Replace with real screenshot path if available -->
+
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React.js, Tailwind CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (Mongoose)
+- **Authentication**: JSON Web Tokens (JWT)
+- **Charts**: Chart.js (via `react-chartjs-2`)
+
+## 🔧 Getting Started
+
+### Prerequisites
+- Node.js & npm
+- MongoDB
+- Git
+
+### Clone the repository
+
+```bash
+git clone https://github.com/Arghya-Chakraborty0812/Expense-Tracker.git
+cd Expense-Tracker
+
