@@ -11,7 +11,7 @@ export default function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevents Default Form Submission
-    const url = isLogin ? 'http://localhost:8000/login' : 'http://localhost:8000/signup';
+    const url = isLogin ? 'https://expense-tracker-backend-1-br47.onrender.com/login' : 'https://expense-tracker-backend-1-br47.onrender.com/signup';
     const payLoad = isLogin ? { username, password } : { email, username, password };
     try {
       const res = await fetch(url, {

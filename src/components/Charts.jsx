@@ -20,7 +20,7 @@ export default function ExpenseBarChart() {
   useEffect(() => {
     const fetchExpenses = async () => {
       const token = localStorage.getItem('token');
-      const response = await fetch('http://localhost:8000/expenses', {
+      const response = await fetch('https://expense-tracker-backend-1-br47.onrender.com/expenses', {
         headers: {
           'Authorization': `Bearer ${token}`,
         },

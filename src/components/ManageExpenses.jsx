@@ -24,7 +24,7 @@ export default function ManageExpenses() {
 
     try {
       // Send POST request to the backend API
-      const response = await fetch('http://localhost:8000/expenses/add', {
+      const response = await fetch('https://expense-tracker-backend-1-br47.onrender.com/expenses/add', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

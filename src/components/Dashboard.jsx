@@ -14,7 +14,7 @@ export default function Dashboard() {
       }
 
       try {
-        const res = await fetch('http://localhost:8000/expenses', {
+        const res = await fetch('https://expense-tracker-backend-1-br47.onrender.com/expenses', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -39,7 +39,7 @@ export default function Dashboard() {
   const handleDelete = async (idToDelete) => {
     const token = localStorage.getItem('token');
     try {
-      const res = await fetch(`http://localhost:8000/expenses/${idToDelete}`, {
+      const res = await fetch(`https://expense-tracker-backend-1-br47.onrender.com/expenses/${idToDelete}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`,
