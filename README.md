@@ -12,7 +12,11 @@ A full-stack Expense Tracker web application built with the **MERN stack (MongoD
 
 ## 🖼️ Demo
 
-![Demo](public/vite.svg) <!-- Replace with real screenshot path if available -->
+
+https://github.com/user-attachments/assets/905f830f-b48f-42e2-8051-ce4d4dd6b81b
+
+
+ <!-- Replace with real screenshot path if available -->
 
 
 ## 🛠️ Tech Stack
