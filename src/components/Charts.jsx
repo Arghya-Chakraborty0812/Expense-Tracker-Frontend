@@ -11,12 +11,14 @@ import {
   Tooltip,
   Legend
 } from 'chart.js';
+import Navbar from './Navbar';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 export default function ExpenseBarChart() {
   const [chartData, setChartData] = useState(null);
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     const fetchExpenses = async () => {
       const token = localStorage.getItem('token');
@@ -78,17 +80,7 @@ export default function ExpenseBarChart() {
 
   return (
     <>
-    <nav className='h-20 bg-cyan-500 flex justify-between items-center px-6'>
-        <h1 className='font-bold text-white text-3xl'>Expense Tracker</h1>
-        <ul className='flex gap-6 text-white font-medium'>
-          <li className='cursor-pointer hover:text-cyan-900' onClick={() => navigate('/charts')}>Report and Analytics</li>
-          <li onClick={() => navigate('/manageExpenses')} className='cursor-pointer hover:text-cyan-900'>Manage Expenses</li>
-          <li className='cursor-pointer hover:text-cyan-900'>Manage Budget</li>
-          <button onClick={() => { localStorage.removeItem('token'); navigate('/signup'); }}>
-            <li className='cursor-pointer hover:text-red-500'>Logout</li>
-          </button>
-        </ul>
-      </nav>
+    <Navbar/>
     <div className='w-[90%] md:w-[60%] mx-auto mt-10'>
       {chartData ? <Bar data={chartData} options={options} /> : <p>Loading chart...</p>}
     </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ export default function Signup() {
       const data = await res.json(); // Parse data from backend
       if (res.ok) {
         localStorage.setItem('token', data.token);
-        alert(data.message);
+        toast.success("Login Successful")
         navigate('/dashboard');
         if (!isLogin) { // If Signup
           setIsLogin(true);
@@ -33,11 +34,11 @@ export default function Signup() {
           setUsername('');
         }
       } else {
-        alert(data.message);
+       toast.error(data.message);
       }
     } catch (err) {
       console.log('Error:', err);
-      alert('Something Went Wrong');
+      toast.error(data.message);
     }
   };
 

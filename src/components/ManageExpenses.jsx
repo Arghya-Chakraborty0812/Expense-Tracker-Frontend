@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
 
 export default function ManageExpenses() {
   const navigate = useNavigate();
@@ -8,6 +9,7 @@ export default function ManageExpenses() {
   const [category, setCategory] = useState('');
   const [description, setDescription] = useState('');
   const [amount, setAmount] = useState('');
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -55,21 +57,7 @@ export default function ManageExpenses() {
 
   return (
     <div>
-      {/* Navbar (same as before) */}
-      <nav className='h-20 bg-cyan-500 flex justify-between items-center px-6'>
-        <h1 className='font-bold text-white text-3xl'>Expense Tracker</h1>
-        <ul className='flex gap-6 text-white font-medium'>
-          <li className='cursor-pointer hover:text-cyan-900' onClick={() => navigate('/charts')}>Report and Analytics</li>
-          <li onClick={() => navigate('/dashboard')} className='cursor-pointer hover:text-cyan-900'>
-            Dashboard
-          </li>
-          <li className='cursor-pointer hover:text-cyan-900'>Manage Budget</li>
-          <button onClick={() => { localStorage.removeItem('token'); navigate('/signup'); }}>
-            <li className='cursor-pointer hover:text-red-500'>Logout</li>
-          </button>
-        </ul>
-      </nav>
-
+      <Navbar/>
       <main style={{ backgroundColor: '#dcdcdc', minHeight: '100vh' }} className='flex flex-col items-center pt-10'>
         <h2 className='text-4xl font-light mb-10'>Add Expense</h2>
         <form onSubmit={handleSubmit} className='flex flex-col gap-6 w-[80%] md:w-[40%]'>

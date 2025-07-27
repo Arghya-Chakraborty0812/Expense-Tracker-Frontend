@@ -8,7 +8,7 @@ export default function Landing() {
   <div>
     <div className='font-bold text-3xl p-2 flex justify-center items-center h-20 bg-cyan-500 text-white text-shadow-black'>Expense Tracker</div>
       <div className='bg-gray-100 h-110'>
-        <div className='font-stretch-extra-condensed text-4xl flex justify-center pt-35'>Finance made simple, smart, and secure.</div>
+        <div className='font-stretch-extra-condensed text-4xl flex justify-center pt-35 '>Finance made simple, smart, and secure.</div>
         <div className='flex justify-center pt-2 font-light text-gray-500 font-stretch-extra-condensed text-2xl'>Your money. Your rules. Our tracker</div>
             <div className='flex justify-center pt-9'>
                 <button className= 'bg-cyan-400 text-white w-50 h-14 rounded-4xl text-2xl font-bold cursor-pointer button' style={{ boxShadow: '0 0 4px rgba(0,0,8,0.60)' }} onClick={() => navigate('/signup')}>Sign up</button>
@@ -25,3 +25,6 @@ export default function Landing() {
   </div>
   )
 }
+
+
+// font-stretch-extra-condensed text-4xl flex justify-center pt-35 sm:text-4xl justify-center
